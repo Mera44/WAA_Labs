@@ -30,8 +30,7 @@ public class Phone implements Serializable {
 	@Range(min=100, max=999, message="{phone.prefixcode}")
  	private Integer prefix;
 	@NotNull
-	@Range(min = 1001)
-	@Size(min=1001,max=9999, message="{phone.numbercode")
+	@Range(min = 1001,max=9999, message="{phone.numbercode}")
  	private Integer number;
 	
 
