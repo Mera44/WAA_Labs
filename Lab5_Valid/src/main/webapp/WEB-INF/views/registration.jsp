@@ -15,6 +15,10 @@
 	<h1>Registration Form</h1>
 	<br />
 	<form:form modelAttribute="student">
+		<p>
+			<form:errors path="*" cssStyle="color : red;" />
+		</p>
+		<br />
 		<label for="firstName">First Name: </label>
 		<form:input path="firstName" id="firstName" />
 
