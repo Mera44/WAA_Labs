@@ -37,7 +37,7 @@ public class Student {
  	@DateTimeFormat(pattern ="mm/dd/yyyy")
     private Date birthday;
  	@Valid
-	private Phone phone;
+	private Phone phon;
 
   	public Integer getId() {
 		return id;
@@ -75,11 +75,11 @@ public class Student {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
-	public Phone getPhone() {
-		return phone;
+	public Phone getPhon() {
+		return phon;
 	}
-	public void setPhone(Phone phone) {
-		this.phone = phone;
+	public void setPhon(Phone phon) {
+		this.phon = phon;
 	}	
 	   	
 	   

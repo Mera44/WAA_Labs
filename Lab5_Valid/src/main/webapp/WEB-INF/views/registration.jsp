@@ -39,17 +39,17 @@
 		<br />
 
 		<label for="area">Phone :</label>
-		<form:input path="phone.area" id="area" />
+		<form:input path="phon.area" id="area" />
 		<span style="text-align: center;"> <form:errors
-				path="phone.area" cssStyle="color : red;" />
+				path="phon.area" cssStyle="color : red;" />
 		</span>
-		<form:input path="phone.prefix" id="prefix" />
+		<form:input path="phon.prefix" id="prefix" />
 		<span style="text-align: center;"> <form:errors
-				path="phone.prefix" cssStyle="color : red;" />
+				path="phon.prefix" cssStyle="color : red;" />
 		</span>
-		<form:input path="phone.number" id="number" />
+		<form:input path="phon.number" id="number" />
 		<span style="text-align: center;"> <form:errors
-				path="phone.number" cssStyle="color : red;" />
+				path="phon.number" cssStyle="color : red;" />
 		</span>
 		<br />
 		<br />
@@ -61,38 +61,6 @@
 
 		<input type="submit" value="Submit" />
 	</form:form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
