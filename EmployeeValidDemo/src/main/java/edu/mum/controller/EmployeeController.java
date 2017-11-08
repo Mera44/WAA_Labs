@@ -46,7 +46,7 @@ public class EmployeeController {
 		MultipartFile employeeImage = employee.getEmployeePhoto();
 		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
 		//String rootDirectory = "/Users/Mera/Document/WAA/EmployeeValidDemo.zip_expanded/EmployeeValidDemo/src/main/webapp/images/"
-;		System.out.println("=======>"+rootDirectory);
+		System.out.println("=======>"+rootDirectory);
 		if (employeeImage != null && !employeeImage.isEmpty()) {
 			try {
 				employeeImage.transferTo(

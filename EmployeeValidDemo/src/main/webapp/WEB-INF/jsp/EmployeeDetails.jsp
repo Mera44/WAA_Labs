@@ -16,7 +16,8 @@
         Last Name: ${employee.lastName}<br/>
         Date of birth: ${employee.birthDate}
     </p><br/>
-    <img src="../../../../Downloads/sts-bundle/pivotal-tc-server-developer-3.2.6.RELEASE/base-instance/wtpwebapps/EmployeeValidDemo/images/${employee.id}.png" alt="image"  style = "width:100%"/>
+  <img src="<c:url value="/image/${employee.id}.png"></c:url>"
+						alt="image" style="width: 100%" />
 </div>
 </body>
 </html>
