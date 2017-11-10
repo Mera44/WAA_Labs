@@ -28,4 +28,8 @@ public class EmployeeService {
   public List<Employee> getAllEmployee(){
 	return (List<Employee>) employeeRepository.findAll();
   }
+  
+  public Employee findEmployeeByEmployeeNumber(int number) {
+	  return (Employee) employeeRepository.findEmployeeByEmployeeNumber(number);
+  }
 }

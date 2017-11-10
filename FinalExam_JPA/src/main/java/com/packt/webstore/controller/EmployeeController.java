@@ -1,5 +1,8 @@
 package com.packt.webstore.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -8,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,14 +35,17 @@ public class EmployeeController {
  		return "employees";
 	}
 	
-  	@RequestMapping("/employee/{id}")
-	public String getEmployeeByNumber(Model model, @RequestParam("id") Long employeeId) {
+  	@RequestMapping("/employee/{number}")
+	public String getEmployeeByNumber(Model model, @PathVariable("number")int number) {
 
   		// Replace
-  		Employee employee = (Employee)employeeService.findemployeeById(employeeId);
+  		Employee employee = employeeService.findEmployeeByEmployeeNumber(number);
+  		System.out.println("employe===>"+employee.getFirstName());
+  		List<Employee>employees=new ArrayList<Employee>();
+  		 employees.add(employee);
   		
-  		model.addAttribute("employee", employee);
-		return "employee";
+  		model.addAttribute("employees",employees);
+		return "employees";
 	}
 
 	
