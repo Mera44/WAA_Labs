@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd"
+	start-state="displayLoginView">
+
+
+
+	<var name="user" class="mum.edu.domain.User" />
+
+	<view-state id="displayLoginView" view="jsp/login.jsp"
+		model="user">
+		<transition on="performLogin" to="displayAdvice" />
+	</view-state>
+	<!-- <action-state id="processOrder" > <evaluate expression="adviceControllerHelper.getAllRoasts()" 
+		result="roasts" /> <transition to="displayAdvice" /> </action-state> -->
+
+	<view-state id="displayAdvice" view="jsp/advice.jsp">
+		<transition on="login" to="displayLoginView">
+		</transition>
+		<transition on="performAdviceList" to="displayDisplay">
+		</transition>
+		<transition on="logout" to="logout">
+		</transition>
+	</view-state>
+
+	<view-state id="displayDisplay" view="jsp/display.jsp"
+		model="user">
+		<transition on="back" to="displayAdvice" />
+	</view-state>
+
+	<end-state id="logout"></end-state>
+</flow>
